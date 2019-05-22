@@ -36,7 +36,7 @@ namespace Faker360
             .RuleFor(f => f.ponumber, f => f.Random.Int(0))
             .RuleFor(f => f.name, f => f.Name.FullName())
             .RuleFor(f => f.sku, f => f.Finance.BitcoinAddress())
-            .RuleFor(f => f.quantity, f => f.Random.Number())
+            .RuleFor(f => f.quantity, f => f.Random.Int(0, 20))
             .RuleFor(f => f.messagetype, f => f.Finance.TransactionType())
             .RuleFor(f => f.shipTo, () => shipTo)
             .RuleFor(f => f.billTo, () => billTo);
